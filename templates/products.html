@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Products | Shoppy{% endblock %}
+
+{% block content %}
+<section class="page-heading container">
+    <p class="eyebrow">The collection</p>
+    <h1>Our products</h1>
+    <p class="intro">Browse what is available and find the right fit for you.</p>
+</section>
+
+<section class="container products-section" aria-label="Product list">
+    {% if products %}
+        <div class="product-grid">
+            {% for product in products %}
+                <article class="product-card">
+                    <div class="product-art" aria-hidden="true">{{ product.name|slice:':1' }}</div>
+                    <div class="product-info">
+                        <h2>{{ product.name }}</h2>
+                        <p class="price-label">Price</p>
+                        <p class="price">Rs. {{ product.price|floatformat:2 }}</p>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="empty-state">
+            <h2>No products yet</h2>
+            <p>Our collection is on its way. Please check back soon.</p>
+        </div>
+    {% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}About us | Shoppy{% endblock %}
+
+{% block content %}
+<section class="page-heading container">
+    <p class="eyebrow">About us</p>
+    <h1>Meet Shoppy</h1>
+    <p class="intro">Shoppy is a small shop project built around a simple idea: make it easy to discover products and see their prices.</p>
+</section>
+
+<section class="container about-panel">
+    <h2>What we do</h2>
+    <p>We bring our products together in one clear place, so you can browse at your own pace. As the collection grows, you can always return to see what is new.</p>
+    <a class="button" href="{% url 'products' %}">Explore products <span aria-hidden="true">→</span></a>
+</section>
+{% endblock %}
