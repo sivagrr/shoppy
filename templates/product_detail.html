@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ product.name }} | Shoppy{% endblock %}
+
+{% block content %}
+<section class="container page-heading">
+    <a class="text-link" href="{% url 'products' %}">← All products</a>
+    <div class="detail-card">
+        <div class="product-art detail-art" aria-hidden="true">{{ product.name|slice:':1' }}</div>
+        <div class="detail-info">
+            <p class="eyebrow">Product details</p>
+            <h1>{{ product.name }}</h1>
+            <p class="price-label">Price</p>
+            <p class="detail-price">Rs. {{ product.price|floatformat:2 }}</p>
+            <div class="detail-actions">
+                <a class="button" href="{% url 'updateproduct' product.id %}">Edit product</a>
+                <a class="text-link" href="{% url 'deleteproduct' product.id %}">Delete product</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

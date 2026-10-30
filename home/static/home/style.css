@@ -38,12 +38,28 @@ h1 { max-width: 730px; margin-bottom: 22px; font-size: clamp(42px, 7vw, 76px); l
 .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 22px; }
 .product-card { overflow: hidden; border: 1px solid #ece8e1; border-radius: 13px; background: #fff; }
 .product-art { height: 170px; display: grid; place-items: center; background: #f0e7da; color: #ad6b4a; font-size: 64px; font-weight: 800; text-transform: uppercase; }
+.product-art[href] { text-decoration: none; }
 .product-info { padding: 22px; }
 .product-info h2 { margin-bottom: 24px; font-size: 21px; }
+.product-info h2 a { text-decoration: none; }
+.product-info h2 a:hover { color: #b7512c; }
 .price-label { margin-bottom: 5px; color: #858078; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
-.price { margin-bottom: 0; font-size: 21px; font-weight: 700; }
+.price { margin-bottom: 18px; font-size: 21px; font-weight: 700; }
 .empty-state { padding: 50px 24px; border: 1px dashed #d8d0c5; border-radius: 13px; text-align: center; }
 .empty-state p { margin-bottom: 0; color: #77716a; }
+
+.detail-card { margin: 28px 0 70px; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; border: 1px solid #ece8e1; border-radius: 15px; background: #fff; }
+.detail-art { height: 360px; font-size: 120px; }
+.detail-info { padding: 48px; }
+.detail-info h1 { font-size: clamp(36px, 5vw, 58px); }
+.detail-price { font-size: 30px; font-weight: 700; }
+.detail-actions { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.product-form { max-width: 530px; margin-bottom: 70px; }
+.product-form p { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
+.product-form label { font-weight: 700; }
+.product-form input { padding: 12px; border: 1px solid #cfcac2; border-radius: 7px; font: inherit; }
+.product-form .errorlist { color: #a32b2b; }
+form .text-link { margin-left: 20px; }
 
 .site-footer { border-top: 1px solid #e8e5df; background: #fff; }
 .footer-inner { min-height: 85px; display: flex; justify-content: space-between; align-items: center; gap: 20px; color: #77716a; font-size: 14px; }
@@ -55,4 +71,7 @@ h1 { max-width: 730px; margin-bottom: 22px; font-size: clamp(42px, 7vw, 76px); l
     .hero-inner { padding: 75px 0; }
     .home-info { flex-direction: column; align-items: flex-start; }
     .footer-inner { padding: 22px 0; flex-direction: column; align-items: flex-start; }
+    .detail-card { grid-template-columns: 1fr; }
+    .detail-art { height: 220px; }
+    .detail-info { padding: 30px; }
 }
