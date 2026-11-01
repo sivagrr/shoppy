@@ -15,7 +15,13 @@
         <div class="product-grid">
             {% for product in products %}
                 <article class="product-card">
-                    <a class="product-art" href="{% url 'productdetail' product.id %}" aria-label="View {{ product.name }}">{{ product.name|slice:':1' }}</a>
+                    <a class="product-art" href="{% url 'productdetail' product.id %}" aria-label="View {{ product.name }}">
+                        {% if product.photo %}
+                            <img src="{{ product.photo.url }}" alt="{{ product.name }}">
+                        {% else %}
+                            {{ product.name|slice:':1' }}
+                        {% endif %}
+                    </a>
                     <div class="product-info">
                         <h2><a href="{% url 'productdetail' product.id %}">{{ product.name }}</a></h2>
                         <p class="price-label">Price</p>

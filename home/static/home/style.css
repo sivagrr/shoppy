@@ -38,6 +38,7 @@ h1 { max-width: 730px; margin-bottom: 22px; font-size: clamp(42px, 7vw, 76px); l
 .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 22px; }
 .product-card { overflow: hidden; border: 1px solid #ece8e1; border-radius: 13px; background: #fff; }
 .product-art { height: 170px; display: grid; place-items: center; background: #f0e7da; color: #ad6b4a; font-size: 64px; font-weight: 800; text-transform: uppercase; }
+.product-art img { width: 100%; height: 100%; object-fit: cover; }
 .product-art[href] { text-decoration: none; }
 .product-info { padding: 22px; }
 .product-info h2 { margin-bottom: 24px; font-size: 21px; }

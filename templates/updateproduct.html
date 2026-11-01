@@ -6,9 +6,9 @@
 <section class="container page-heading">
     <p class="eyebrow">Products</p>
     <h1>Update {{ product.name }}</h1>
-    <p class="intro">Edit the name or price below.</p>
+    <p class="intro">Edit the product details below.</p>
 
-    <form class="product-form" method="post">
+    <form class="product-form" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <button class="button" type="submit">Save changes</button>

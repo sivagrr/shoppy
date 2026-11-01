@@ -6,7 +6,7 @@
 <section class="container page-heading">
     <h1>Add a product</h1>
 
-    <form class="product-form" method="post">
+    <form class="product-form" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <button class="button" type="submit">Save product</button>
